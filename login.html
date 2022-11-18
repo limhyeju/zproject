@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <link rel="shortcut icon" href="images/weblogo.ico"> <!--네이버 w3c 유효성 검사에서 안돼서 구글 유효성 검사 시 8-11줄 link 있는부분 주석처리하고 검사하기-->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/join.css">
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/join.js"></script>
+</head>
+<body>
+    <!--건너뛰기 링크-->
+    <a id="skipNav" href="#dropdown">본문 바로가기</a>
+    <!--건너뛰기 링크 종료-->
+
+    <!--#wrapper 시작: 전체 영역 및 유일 id, 나머진 class-->
+    <div id="wrapper">
+        
+        <!--헤더 영역 시작: 로고, 글로벌 메뉴(검색, 로그인, 회원가입), 비쥬얼, 메인메뉴(프로그램, 예약안내, 커무니티, 고객센터, 오시는길)-->
+        <header>
+            <div class="logo"><!--로고-->
+                <a href="index.html">
+                    <img src="images/logo.png" alt="YourPersonalColor">
+                </a>
+            </div>
+            <div class="infoLink"><!--글로벌메뉴-->
+                <a href="login.html">
+                    <img src="images/red.png" alt="로그인" title="로그인" class="red"><!--title:힌트-->
+                </a>
+                <a href="join.html">
+                    <img src="images/yellow.png" alt="회원가입" title="회원가입" class="yellow">
+                </a>
+                <a href="#">
+                    <img src="images/green.png" alt="마이페이지" title="마이페이지" class="green">
+                </a>
+            </div>
+            <div id="mainVisual"><!--비주얼 영역-->
+                <div class="letter">
+                    <p class="hletter"><span>Y</span><span>O</span><span>U</span><span>R</span></p>
+                    <p><span>C</span><span>O</span><span>L</span><span>O</span><span>R</span></p>
+                </div>
+            </div>
+            <!--본문 메인메뉴-->
+            <nav>
+                <ul>
+                    <li class="dropdown"><a href="#" class="dropbtn">프로그램</a>
+                        <ul class="dropdown_content">
+                            <li><a href="personalColor.html">퍼스널컬러</a></li>
+                            <li><a href="#">메이크업</a></li>
+                            <li><a href="#">핏스타일</a></li>
+                        </ul>
+                    </li>    
+                    <li class="dropdown"><a href="#" class="dropbtn">예약안내</a>
+                        <ul class="dropdown_content">
+                            <li><a href="#">퍼스널컬러 코스</a></li>
+                            <li><a href="#">메이크업 코스</a></li>
+                            <li><a href="#">핏스타일 코스</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown"><a href="#" class="dropbtn">커뮤니티</a>
+                        <ul class="dropdown_content">
+                            <li><a href="#">컬럼</a></li>
+                            <li><a href="#">소식</a></li>
+                            <li><a href="#">후기</a></li>
+                        </ul>    
+                    </li>
+                    <li class="dropdown"><a href="#" class="dropbtn">고객센터</a>
+                        <ul class="dropdown_content">
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">QNA</a></li>
+                        </ul>    
+                    </li>
+                    <li class="dropdown"><a href="#" class="dropbtn">오시는 길</a>    
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <!--헤더 영역 종료-->
+        
+         <!--회원가입 영역 시작-->
+         <section id="memberArea" class="memberJoin">
+            <h2>로그인</h2>
+            <form action="join.jsp" method="post" id="joinForm" name="joinForm">
+                <div>
+                    <p>
+                        <label for="id"><em  class="require">*</em> 이메일(아이디)</label>
+                        <input type="text" id="id" name="id" required placeholder="로그인 시 사용할 이메일을 입력해주세요" size="70">
+                    </p>
+                    <p>
+                      <label for="password"><em  class="require">*</em> 비밀번호</label>
+                      <input type="password" id="password" name="password" required placeholder="영/특문/숫자 하나씩 조합해서 8자리 이상 입력해주세요" size="70">  
+                    </p>
+                    <div class="btnJoinArea">
+                        <button type="submit" class="btnOk">로그인</button>
+                        <button type="reset" class="btnCancel">다시입력</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+        <!--회원가입 영역 종료-->
+
+        <!--푸터 영역 시작-->
+        <footer id="footer">
+            <div id="footerInner">
+                <address>
+                    <span>서울시 행복구 색깔동 123-45 퍼스널빌딩 5층</span>
+                    <span> | 전화: 02-345-6789</span>
+                    <span> | E-MAIL: <a href="">your@personal.color</a></span>
+                </address>
+                    <p class="copyright">Copyright since &copy; 2022 by Web YourPersonalColor CORPORATION ALL RIGHTS RESERVED.</p>
+                <div class="footerSns">
+                    <ul class="addressinfo">
+                        <li class="no1"><a href="https://www.youtube.com/"><img src="images/youtube.png" alt="youtube" class="youtube"></a></li>
+                        <li class="no2"><a href="https://www.instagram.com/"><img src="images/instagram.png" alt="instagram" class="instagram"></a></li>
+                        <li class="no3"><a href="https://www.facebook.com/"><img src="images/facebook.png" alt="facebook" class="facebook"></a></li>
+                        <li class="no2"><a href="https://twitter.com/?lang=ko"><img src="images/twitter.png" alt="twitter" class="twitter"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <!--푸터 영역 종료-->
+    </div>
+    <!--#wrapper 종료-->
+    <!--주석 달기 필수, 전체 영역 마크업-->
+</body>
+</html>
+<!--메인페이지. 메인페이지 html이름은 무조건 index.html로 하기
+    div로 나누는 것보다 시멘틱테그 이용해서 사용하는게 좋음
+    한번만 정의되는 커다란 영역 및 세부 레이아웃 :id(id 남발 금지)
+    나머진 중복가능한 class로 공통 영역 나누기-->
+<!--헤더, 메인 비쥬얼, 컨텐츠(3부분으로 나눔), 슬로건, 푸터
+    폰트 사용, 필요 이미지&공통이미지 나눠짐-->
+<!--뭔가 적용이 안될 땐 f12 눌러서 핸드폰 보는거 옆 마우스 모양 클릭해서 홈페이지 눌러보기, styles에 안뜨면 뭔가 오류난거, 체크부분 눌러서 확인해볼 수 있음. 체크부분은 원본에 지장 없음-->    

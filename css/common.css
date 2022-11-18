@@ -1,0 +1,275 @@
+@charset "utf-8";
+/*초기화*/
+*{
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style: none;
+}
+/*링크 스타일*/   
+a:link{
+    color: #000;
+    text-decoration: none;
+}
+a:visited{
+    color: #000;
+    text-decoration: none;
+}
+/*크기*/
+body{
+    width: 960px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+/*건더뛰기(웹접근성) 링크: body(common스타일 종료)*/
+#skipNav{
+    position: absolute;
+    left: -9999px;
+}
+#skipNav:focus{
+    left: 50%; /*tap키 눌렀을 때 잘보이도록 화면 가운데 배치*/
+    margin: 3px 0 0 -3em;
+    padding: 5px 15px;
+    background-color: #000;
+    color: #fff;
+    outline: 0; 
+    z-index: 10; 
+}
+
+/*해더 영역 시작*/
+header{
+    height: 500px;
+    position: relative;
+}
+header> .logo{
+    display: inline-block;
+    padding-top: 35px;
+    width: 20%;
+    /*height: 100px; 비주얼 이미지랑 떨어뜨리고 싶음 주기*/
+}
+.logo img{
+    width: 50px;
+    height: 50px;  
+}
+header .infoLink{
+    display: inline-block;
+    width: 79%;
+    text-align: right;   
+    height: 50px;
+}
+.infoLink img{
+    width: 30px;
+    height: 30px;
+    margin-left: 30px;;
+}
+.infoLink .red{
+    opacity: 1;
+}
+.infoLink .red:hover{
+    opacity: 0.5; 
+}
+.infoLink .yellow{
+    opacity: 1;
+}
+.infoLink .yellow:hover{
+    opacity: 0.5;   
+}
+.infoLink .green{
+    opacity: 1;
+}
+.infoLink .green:hover{
+    opacity: 0.5;
+}
+
+/*비주얼 영역*/
+#mainVisual{
+    height: 400px;
+    position: relative;
+}
+#mainVisual::before, #mainVisual::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 400px;
+    animation: flowerAni 2s;
+    animation-direction: alternate; 
+    animation-iteration-count: infinite; 
+}
+#mainVisual::before{
+    background-image:   url(images/circle1.png),
+                        url(images/circle2.png),
+                        url(images/circle3.png),
+                        url(images/circle4.png),
+                        url(images/circle5.png),
+                        url(images/circle6.png),
+                        url(images/circle7.png),
+                        url(images/circle8.png),
+                        url(images/circle9.png);
+    background-repeat: no-repeat;
+    background-position: 0 5px, 580px 100px, 750px 85px, 500px 0, 800px 250px, 750px 10px, 430px 200px, 850px -50px, 580px 280px;               
+}
+#mainVisual::after{
+    background-image:   url(images/circle9.png),
+                        url(images/circle8.png),
+                        url(images/circle7.png),
+                        url(images/circle6.png),
+                        url(images/circle5.png),
+                        url(images/circle4.png),
+                        url(images/circle3.png),
+                        url(images/circle2.png),
+                        url(images/circle1.png);
+    background-repeat: no-repeat;
+    background-position: 465px 0px, 650px 260px, 100px 350px, 130px 310px, 400px 100px, -40px 250px, 180px 220px, 200px 50px, 300px 300px;
+    animation-delay: 1s;                  
+}
+/*애니메이션 활용*/
+@keyframes flowerAni {
+    form{
+        opacity: 1; /*불투명*/
+    }
+    to{
+        opacity: 0; /*투명*/
+    }
+}
+/*YOUR COLOR*/
+#mainVisual .letter{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -170px;
+    margin-top: -185px;
+    font-size: 7em;
+    font-weight: bolder;
+    z-index: 10;
+}
+#mainVisual .letter .hletter{
+    margin-left: 30px;
+}
+
+/*본문 메인메뉴*/
+nav{
+    background-color: rgba(212, 212, 212, 0.4);
+    margin-top: -50px;
+    position: absolute;
+}
+nav:hover{
+    background-color: rgba(68, 68, 68, 0.6);
+}
+nav .dropbtn{
+    font-weight: bold;
+}
+nav li.dropdown{
+    display: inline-block;
+    width: 187.5px;
+    text-align: center;
+    z-index: 10;
+}
+nav li.dropdown>a{
+    display: block;
+    padding: 14px 16px;
+    text-align: center;
+}
+/* nav li.dropdown:hover ul.dropdown_content{
+    display: block;
+}*/ /*common.js에서 효과줌*/
+nav li.dropdown>a:hover, nav li.dropdown:hover .dropbtn{
+    color: #fff
+}
+nav ul.dropdown_content{
+    display: none;
+    width: 187.5px;
+    position: absolute;
+    background-color: rgb(234, 234, 234, 0.7);
+    z-index: 50;
+}
+nav ul.dropdown_content a{
+    display: block;
+    padding: 14px 16px;
+    text-align: center;
+}
+nav ul.dropdown_content a:hover{
+    background-color: #444444;
+    color: #fff;
+}
+
+/*푸터 영역*/
+footer address{
+    clear: both; 
+    float: left;
+    font-style: normal; /*글꼴 기울기 없앰, 기본이 italic*/
+    font-size: 0.8em;
+    margin-top: 100px;
+}
+footer p{
+    float: left;
+    font-style: normal; 
+    font-size: 0.8em;
+    margin-bottom: 50px; 
+}
+.footerSns{
+    float: right; /*ul을 display: inline-block 으로 줬으면 text-align right(부모가 자식한테 주라고 함)하면 float줄 때랑 달리 크기 맞추기 더 쉬움*/
+    width: 360px;
+    margin-top: -40px;
+}
+.addressinfo img{
+    width: 40px;
+    float: left; 
+    margin-top: 30px;
+    margin-left: 45px;
+}
+.addressinfo .youtube{
+    opacity: 1;
+    margin-top: 33px;
+}
+.addressinfo .youtube:hover{
+    opacity: 0.5;
+}
+.addressinfo .instagram{
+    opacity: 1;
+}
+.addressinfo .instagram:hover{
+    opacity: 0.5;
+}
+.addressinfo .facebook{
+    opacity: 1;
+}
+.addressinfo .facebook:hover{
+    opacity: 0.5;
+}
+.addressinfo .twitter{
+    opacity: 1;
+}
+.addressinfo .twitter:hover{
+    opacity: 0.5;
+}
+/*.footerSns em{
+    float: left; 
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    background: url(images/address.png) no-repeat 0 0;
+}
+/*.footerSns .youtube{
+    background-position: 25px 0;
+}
+.footerSns .instagram{
+    background-position: 40% 0;
+    margin-left: 10px;
+}
+.footerSns .facebook{
+    background-position: 70% 0;
+    width: 80px;
+    margin-left: -10px;
+}
+.footerSns .twitter{
+    background-position: 100% 0;
+    width: 80px;
+}*//*한개 이미지에서 색깔 변하는 호버 주려면 각각 이미지 준비*/
+
+/*홈페이지 이미지 순서대로 코딩하면 나중에 보기 편함, 뭔가 적용 안될 경우 f12로 한개씩 확인*/
+/*다 엡솔루트로 자리잡으면 왼쪽 끝에서 시작해서 하나하나 자리차지하게 줘야됨(레프트 0. 탑 0, 라이트 0, 탑0. (로고, 글로벌메뉴) 마진 탑(글로벌메뉴) 등 어려움...(송해, 형돈 X 참고))
+옮기고 싶은거 2개씩 div로 묶어서(로고, 글로벌메뉴/ 메인이미지, 메인 글씨/ 네비) 위치하기. 엡솔루트안하면 순서대로 내려감
+아니면 다른 예쁜 홈페이지 f12로 div확인해보기(css는 안나와도 div는 나오니깐) 그리고 하나씩 눌러보고 박스 체크 확인해보기*/
+/*자바 스크립트 어려운 부분은 플러그인 쓰면 됨(시계 돌아가는거: 싸인, 코싸인 등)*/

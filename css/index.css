@@ -1,0 +1,264 @@
+@charset "utf-8";
+/*첫번째 메인 콘텐츠*/
+/*메인 4계절 퍼스널 컬러 팔레트 슬라이더*/
+#imgLogo, #mainSeasonArea, #subSeasonArea{
+    clear: both;
+    padding-top: 50px;
+    display: inline-block;
+    width: 190px;
+}
+#imgLogo img{
+    width: 150px;
+    position: absolute;
+    margin-top: -400px;
+}
+#mainSeasonArea{ 
+    position: relative; /*본문 메인 메뉴 slideDown 시 충돌, 근데 안주면 js 좌우 컨트롤 슬라이드 안됨.*/
+    width: 400px;
+    margin-left: 60px;
+    overflow: hidden; 
+}
+.mainSeasonArea_panel{ 
+    width: 1600px;
+    position: relative; /*본문 메인 메뉴 slideDown 시 충돌, 근데 안주면 js 좌우 컨트롤 슬라이드 안됨.*/
+}
+.seasonColor{
+    width: 400px;
+    float: left;
+}
+#firstContentsArea{
+    position: relative;
+}
+.left_control{
+    position: absolute;
+    top: 400px;
+    left: 100px;
+    cursor: pointer;
+}
+.right_control{
+    position: absolute;
+    top: 400px;
+    left: 140px;
+    cursor: pointer;
+}
+/*서브 4계절 퍼스널 컬러 팔레트 콘텐츠*/
+#subSeasonArea{ 
+    position: relative;
+    width: 200px;
+    margin-left: 730px;
+    margin-top: -270px;
+    float: left;
+    overflow: hidden;
+}
+.subSeasonArea_panel{ 
+    width: 600px;
+    position: relative;
+}
+.subseasonColor{
+    width: 200px;
+    float: left; 
+}
+
+
+
+/*두번째 메인 콘텐츠*/
+.checkList li{
+    float: left;
+    position: relative;   
+    overflow: hidden;
+}
+.checkList img{
+    width: 280px;
+    height: 210px;
+    margin-left: 30px;
+    margin-top: 60px;
+}
+.checkList .caption{
+    position: absolute;
+    top: 210px;
+    width: 280px;
+    height: 210px;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: all 0.3s;
+    z-index: 10;
+    margin-left: 30px;
+    margin-top: 60px;
+}
+.checkList p{
+    line-height: 70px;
+    text-align: center;
+    color: #fff;
+    font-size: 2em;
+}
+.caption span{
+    color: #D22828;
+}
+.checkList li:hover .caption{
+    opacity: 1;
+    transform: translateY(-210px);
+}
+
+/*세번째 메인 콘텐츠*/
+.animation_canvas{ /*하나의 이미지 크기*/
+    position: relative; /*이미지 움직일거라*/
+    width: 960px;
+    overflow: hidden; /*이미지 한개만 보임, 어떻게 보이는지 확인 후 다 만든 후 주석제거*/
+}
+.slider_panel{ /*모든 이미지 크기 합친거*/
+    width: 2880px;
+    position: relative;
+}
+.slider_image{
+    width: 960px;
+    margin-top: 60px;
+    float: left; /*이미지 기본 마진과 패딩때문에 크기가 부족해 이미지 1개가 내려감, 이렇게 하면 옆으로 다 붙음*/
+}
+.control_panel{
+    position: absolute;
+    top: 480px;
+    left: 440px;
+    height: 22px;
+    overflow: hidden; /*이미지 한개만 보임, 어떻게 보이는지 확인 후 다 만든 후 주석제거*/
+}
+.control_button{
+    position: relative;
+    cursor: pointer;
+    background: url(images/point_button.png); /*한개 이미지로 3개 효과 (스프라이트 기법), 만약 이미지 한개씩 준비할 경우 attr로 연결 필요*/
+    float: left;
+    width: 25px;
+    height: 70px;
+}
+.control_button:hover{
+    top: -25px;
+}
+.control_button.active{
+    top: -50px;
+}
+
+/*네번째 메인 콘텐츠*/
+#fourthContentsArea img{
+    clear: both; 
+    position: relative;
+    width: 960px;
+    padding-top: 50px;
+}
+#youtube iframe{
+    width: 350px;
+    height: 250px;
+    margin-left: 60px;
+    margin-top: -150px;
+    position: absolute;
+}
+#review{
+    width: 370px;
+    height: 250px;
+    background-color: #000;
+    margin-left: 530px;
+    margin-top: -150px;
+    position: absolute;
+}
+#review p{
+    font-weight: bold;
+    font-size: 1.2em;
+    text-align: center;
+    color: #fff;
+    margin-top: 5px;
+}
+.realReview{
+    width: 95%;
+    height: 200px;
+    background: url(images/review.png) no-repeat;
+    background-size: 100%;
+    margin-left: 8.5px;
+    margin-top: 5px;
+    animation: ani_back 10s infinite;
+}
+@keyframes ani_back {
+    0%{
+        background-position: 0 0;
+    }
+    50%{
+        background-position: 0 100%;
+    }
+    100%{
+        background-position: 0 0;
+    }
+}
+
+/*다섯번째 메인 콘텐츠*/
+.schedule{
+    clear: both; 
+    width: 405px;
+    float: left;
+    margin-top: 200px;
+    border-top: 2px solid black;
+}
+.schedule h2{
+    margin-top: 10px;
+}
+.schedule img{
+    width: 405px;
+    height: 350px;
+    margin-top: 20px;
+}
+.confirm{ 
+    width: 495px;
+    float: right;
+    margin-top: 200px;
+    border-top: 2px solid black;
+}
+.confirm h2{
+    margin-top: 10px;
+}
+#tel img{
+    float: left;
+    width: 245px;
+    height: 367px;
+    margin-top: 11px;
+    margin-left: -5px;
+}
+.snsKakao{
+    overflow: hidden;
+    width: 255px;
+    height: 125px;
+    margin-top: 25px;
+}
+.kakao:hover{
+    transform: scale(1.1, 1.1);
+}
+.snsNaver{
+    overflow: hidden;
+    width: 255px;
+    height: 125px;
+}
+.naver:hover{
+    transform: scale(1.1, 1.1);
+}
+.snsInsta{
+    overflow: hidden;
+    width: 255px;
+    height: 125px;
+}
+.insta:hover{
+    transform: scale(1.1, 1.1);
+}
+
+/*.sns em{
+    float: right;
+    width: 250px;
+    height: 112px;
+    overflow: hidden;
+    margin-top: 13px;
+    background: url(images/sns.png) no-repeat 0 0;
+}
+.sns .kakao{
+    background-position: 0 0;
+}
+.sns .naver{
+    background-position: 0 50%;
+}
+.sns .instag{
+    background-position: 0 100%;
+}*/ /*이미지 한개씩 변화주려면 이미지 1개씩 준비*/
+

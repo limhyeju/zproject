@@ -1,0 +1,74 @@
+/*서브페이지 personalcolor 시작*/
+#line{
+    width: 960px;
+    margin-top: 80px;
+    position: relative;
+}
+#lineleft{
+    display: inline-block;
+    height: 20px;
+    background-color: #000;
+    margin-top: 50px;
+}
+#lineright{
+    display: inline-block;
+    position:absolute; 
+    right: 0px;
+    height: 20px;
+    background-color: #000;
+    margin-top: 50px;
+}
+#color{
+    width: 960px;
+    height: 970px;
+    overflow: hidden;
+}
+#color #pccs #pccscircle{
+    position: absolute;
+    width: 460px;
+    height: 400px;
+    margin-top: 15px;
+    margin-left: 15px;
+    opacity: 0;
+    z-index: 10;
+}
+#color #pccs #pccsgraph{
+    position: absolute;
+    width: 475px;
+    height: 400px;
+    margin-left: -15px;
+    margin-top: 15px;
+    opacity: 0;
+}
+#person>img{
+    margin: 0;
+    padding: 0;
+    width: 460px;
+    margin-left: 15px;
+    margin-top: 430px;
+    position: absolute;
+    opacity: 0;
+    z-index: 10;
+}
+#smallperson{
+    margin-top: 20px;
+    display: inline-block;
+    margin-top: 808px;
+    position: relative;
+    opacity: 0;
+}
+#smallperson>img{
+    width: 105px;
+    height: 145px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+#personscript{
+    margin-top: -400px;
+    position: relative;
+    opacity: 0;
+}
+#personscript>img{
+    width: 465px;
+    height: 145px;
+}

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>personalColor</title>
+    <link rel="shortcut icon" href="images/weblogo.ico"> <!--네이버 w3c 유효성 검사에서 안돼서 구글 유효성 검사 시 8-11줄 link 있는부분 주석처리하고 검사하기-->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/css/servicecenter.css">
+    <link rel="stylesheet" href="css/personalColor.css">
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/personalColor.js"></script>
+    <script src="js/"></script>
+   
+</head>
+<body>
+    <!--건너뛰기 링크-->
+    <a id="skipNav" href="#dropdown">본문 바로가기</a>
+    <!--건너뛰기 링크 종료-->
+
+    <!--#wrapper 시작: 전체 영역 및 유일 id, 나머진 class-->
+    <div id="wrapper">
+        
+        <!--헤더 영역 시작: 로고, 글로벌 메뉴(검색, 로그인, 회원가입), 비쥬얼, 메인메뉴(프로그램, 예약안내, 커무니티, 고객센터, 오시는길)-->
+        <header>
+            <div class="logo"><!--로고-->
+                <a href="index.html">
+                    <img src="images/logo.png" alt="YourPersonalColor">
+                </a>
+            </div>
+            <div class="infoLink"><!--글로벌메뉴-->
+                <a href="login.html">
+                    <img src="images/red.png" alt="로그인" title="로그인" class="red"><!--title:힌트-->
+                </a>
+                <a href="join.html">
+                    <img src="images/yellow.png" alt="회원가입" title="회원가입" class="yellow">
+                </a>
+                <a href="#">
+                    <img src="images/green.png" alt="마이페이지" title="마이페이지" class="green">
+                </a>
+            </div>
+            <div id="mainVisual"><!--비주얼 영역-->
+                <div class="letter">
+                    <p class="hletter"><span>Y</span><span>O</span><span>U</span><span>R</span></p>
+                    <p><span>C</span><span>O</span><span>L</span><span>O</span><span>R</span></p>
+                </div>
+            </div>
+            <!--본문 메인메뉴-->
+            <nav>
+                <ul>
+                    <li class="dropdown"><a href="#" class="dropbtn">프로그램</a>
+                        <ul class="dropdown_content">
+                            <li><a href="personalColor.html">퍼스널컬러</a></li>
+                            <li><a href="#">메이크업</a></li>
+                            <li><a href="#">핏스타일</a></li>
+                        </ul>
+                    </li>    
+                    <li class="dropdown"><a href="#" class="dropbtn">예약안내</a>
+                        <ul class="dropdown_content">
+                            <li><a href="#">퍼스널컬러 코스</a></li>
+                            <li><a href="#">메이크업 코스</a></li>
+                            <li><a href="#">핏스타일 코스</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown"><a href="#" class="dropbtn">커뮤니티</a>
+                        <ul class="dropdown_content">
+                            <li><a href="#">컬럼</a></li>
+                            <li><a href="#">소식</a></li>
+                            <li><a href="#">후기</a></li>
+                        </ul>    
+                    </li>
+                    <li class="dropdown"><a href="#" class="dropbtn">고객센터</a>
+                        <ul class="dropdown_content">
+                            <li><a href="servicecenter.html">FAQ</a></li>
+                            <li><a href="servicecenterquestion.html">QNA</a></li>
+                        </ul>    
+                    </li>
+                    <li class="dropdown"><a href="#" class="dropbtn">오시는 길</a>    
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <!--헤더 영역 종료-->
+        <!--고객센터 영역 시작-->
+        <div class="allserviceform">
+            <div class="marginserviceform">
+                <div class="servicespace">
+                    <div class="servicearea">고객센터</div>
+                    <ul class="servicetextarea">
+                        <li>
+                            <a class="active notice" href="servicecenter.html">공지사항
+                                <span class="bracket"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="notice" href="servicecenterquestion.html">자주하는 질문
+                                <span class="bracket"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="notice">1:1문의
+                                <span class="bracket"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="notice">대량주문 문의
+                                <span class="bracket"></span>
+                            </a>
+                        </li>
+                    </ul>
+                    <a href="#" class="helpspace">
+                        <div class="helptext">
+                            <span class="question">도움이 필요하신가요 ?</span>
+                            <span class="inquiry">1:1 문의하기</span>
+                        </div>
+                        <span class="changebracket"></span>
+                    </a>
+                </div>
+                <div class="noticespace">
+                    <div class="noticearea">
+                        <div class="noticetextarea">
+                            <h2 class="noticetext">공지사항</h2>
+                            <span class="noticeinfo">컬러의 새로운 소식들과 유용한 정보들을 한곳에서 확인하세요.</span>
+                        </div>
+                    </div>
+                    <div class="infospace">
+                        <div width="50" class="infonumber">번호</div>
+                        <div class="infotitle">제목</div>
+                        <div width="100" class="write">작성자</div>
+                        <div width="100" class="write">작성일</div>
+                    </div>
+                    <ul class="writespace">
+                        <li>
+                            <a href="servicecenterinfo.html">
+                                <div class="writearea">
+                                    <div class="realnotice">공지</div>
+                                    <div class="realinfo">[안내] 컬러 소비자 분쟁해결 기준 안내</div>
+                                    <div class="realwriter">YourPersonalColor</div>
+                                    <div class="realdate">2022.11.03</div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="pagespace">
+                        <div class="pagearea">
+                            <button disabled type="button" class="backbutton">
+                                <div class="pagetext">이전</div>
+                            </button>
+                            <button type="button" class="nextbutton">
+                                <div class="pagetext">다음</div>
+                            </button>
+                        </div>
+                    </div>                   
+                </div>
+            </div>
+        </div>
+        <!--고객센터 영역 종료-->
+         <!--푸터 영역 시작-->
+         <footer id="footer">
+            <div id="footerInner">
+                <address>
+                    <span>서울시 행복구 색깔동 123-45 퍼스널빌딩 5층</span>
+                    <span> | 전화: 02-345-6789</span>
+                    <span> | E-MAIL: <a href="">your@personal.color</a></span>
+                </address>
+                    <p class="copyright">Copyright since &copy; 2022 by Web YourPersonalColor CORPORATION ALL RIGHTS RESERVED.</p>
+                <div class="footerSns">
+                    <ul class="addressinfo">
+                        <li class="no1"><a href="https://www.youtube.com/"><img src="images/youtube.png" alt="youtube" class="youtube"></a></li>
+                        <li class="no2"><a href="https://www.instagram.com/"><img src="images/instagram.png" alt="instagram" class="instagram"></a></li>
+                        <li class="no3"><a href="https://www.facebook.com/"><img src="images/facebook.png" alt="facebook" class="facebook"></a></li>
+                        <li class="no2"><a href="https://twitter.com/?lang=ko"><img src="images/twitter.png" alt="twitter" class="twitter"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <!--푸터 영역 종료-->
+    </div>
+    <!--#wrapper 종료-->
+    <!--주석 달기 필수, 전체 영역 마크업-->
+</body>
+</html>      

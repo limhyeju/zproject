@@ -1,0 +1,121 @@
+@charset "utf-8";
+/*memberArea 영역 시작*/
+#memberArea{
+    width: 960px;
+    margin-top: 80px;
+}
+#memberArea h2{
+    font-size: 1.5em;
+    border-bottom: 2px solid #D4D4D4;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+}
+.require{
+    color: #D22828;
+}
+#joinForm p{
+    border-bottom: 1px solid #ccc;
+    overflow: hidden;/*밑에 float: left때문에 엉망진창 되니깐 hidden해줘야 됨*/
+    position: relative;
+}
+#tel, .tel{
+    width: 50px;
+}
+#joinForm label{
+    float: left;
+    width: 140px; /*아이디와 비밀번호 칸 정렬돼서 맞게 하려고*/
+    padding: 13px 20px;
+    margin-right: 10px;
+    font-weight: bold;
+}
+#joinForm label.nolabel{
+    float: none;
+    padding: 0;
+}
+#joinForm input{
+    margin: 10px 0;
+}
+#joinForm input:not([type=radio]){
+    border: 1px solid #aaa;
+    padding-left: 5px;
+}
+a.idCheck, a.findZipcode{
+    background-color: #0075FF;
+    color: #fff;
+    padding: 3px 15px;
+    margin-top: 8px;
+}
+a.idCheck:hover, a.findZipcode:hover{
+    background-color: #005CC8;
+}
+.labelAddress{
+    height: 80px; /*주소 칸은 높이가 더 넓어야 됨.*/
+    line-height: 50px;
+}
+.labelAddress span{
+    position: absolute;
+    margin-top: 28px;
+    margin-left: 13px;
+}
+.agrees{
+    height: 107px; 
+    border-bottom: 2px solid #D4D4D4;;
+}
+.agrees span{
+    display: block;
+}
+#joinForm .agrees span label{
+    float: none;
+    padding: 0;
+}
+.agrees .agree{
+    height: 107px;
+}
+.agree em{
+    position: absolute;
+    margin-top: 24px;
+}
+.agree #agreespan{
+    position: absolute;
+    margin-top: 25px;
+    margin-left: 13px;
+}
+#joinForm p .mt{
+    position: absolute;
+    margin-top: 7px;
+}
+#joinForm p .mt2{
+    position: absolute;
+    margin-top: 7px;
+    margin-left: 50PX;
+ }
+ #joinForm p .mt3{
+    position: absolute;
+    margin-top: 7px;
+}
+#joinForm p .mt4{
+    position: absolute;
+    margin-top: 7px;
+    margin-left: 50PX;
+ }
+ .check1{
+    position: relative;
+    margin-top: 5px;
+} 
+.btnJoinArea{
+    text-align: center;
+    margin: 15px 0;
+    margin-top: 50px;
+}
+.btnJoinArea button{
+    font-size: 1.5em;
+    color: #fff;
+    padding: 10px 40px;
+    margin: 0 10px;
+    background-color: #000;
+    letter-spacing: 5px;/*글자간격*/
+}
+.btnJoinArea button:hover{
+    opacity: 0.5;
+}

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="hyeju Lim">
+    <meta name="keywords" content="your color, personal color, your personal color">
+    <meta name="description" content="personal color에 관한 소개">
+    <meta name="robots" content="all">
+    <title>YOUR PERSONAL COLOR</title>
+    <link rel="shortcut icon" href="images/weblogo.ico"> <!--네이버 w3c 유효성 검사에서 안돼서 구글 유효성 검사 시 11-14줄 link 있는부분 주석처리하고 검사하기-->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/index.js"></script>
+    <script>
+        let smartPhones=[
+            'iphone', 'ipod', 'ipad', 'opera mini', 'opera mobi', 'nokia', 'android',
+            'Webos', 'Windows ce', 'blackberry', 'iemobile', 'sonyEricsson'
+        ];
+        //스마트폰 구분(스마트폰인지 데스크 탑인지)
+        for(let i in smartPhones){ //let i up i<=smartPHones.length; i++;
+            if(navigator.userAgent.toLowerCase().match(new RegExp(smartPhones[i]))){
+                //alert('스마트폰');
+                document.location='http://limhj0309.dothome.co.kr/mindex.html';
+            }
+        }
+    </script>
+</head>
+<body>
+    <!--건너뛰기 링크-->
+    <a id="skipNav" href="#dropdown">본문 바로가기</a>
+    <!--건너뛰기 링크 종료-->
+
+    <!--#wrapper 시작: 전체 영역 및 유일 id, 나머진 class-->
+    <div id="wrapper">
+        
+        <!--헤더 영역 시작: 로고, 글로벌 메뉴(검색, 로그인, 회원가입), 비쥬얼, 메인메뉴(프로그램, 예약안내, 커무니티, 고객센터, 오시는길)-->
+        <header>
+            <div class="logo"><!--로고-->
+                <a href="index.html">
+                    <img src="images/logo.png" alt="YourPersonalColor">
+                </a>
+            </div>
+            <div class="infoLink"><!--글로벌메뉴-->
+                <a href="login.html">
+                    <img src="images/red.png" alt="로그인" title="로그인" class="red"><!--title:힌트-->
+                </a>
+                <a href="join.html">
+                    <img src="images/yellow.png" alt="회원가입" title="회원가입" class="yellow">
+                </a>
+                <a href="#">
+                    <img src="images/green.png" alt="마이페이지" title="마이페이지" class="green">
+                </a>
+            </div>
+            <div id="mainVisual"><!--비주얼 영역-->
+                <div class="letter">
+                    <p class="hletter"><span>Y</span><span>O</span><span>U</span><span>R</span></p>
+                    <p><span>C</span><span>O</span><span>L</span><span>O</span><span>R</span></p>
+                </div>
+            </div>
+            <!--본문 메인메뉴: 만약 메뉴 하나 호버시 전체 메뉴 보이게 만들려며 자바스크립트로만 가능, css불가능-->
+            <nav>
+                <ul>
+                    <li class="dropdown"><a href="#" class="dropbtn">프로그램</a>
+                        <ul class="dropdown_content">
+                            <li><a href="personalColor.html">퍼스널컬러</a></li>
+                            <li><a href="#">메이크업</a></li>
+                            <li><a href="#">핏스타일</a></li>
+                        </ul>
+                    </li>    
+                    <li class="dropdown"><a href="#" class="dropbtn">예약안내</a>
+                        <ul class="dropdown_content">
+                            <li><a href="#">퍼스널컬러 코스</a></li>
+                            <li><a href="#">메이크업 코스</a></li>
+                            <li><a href="#">핏스타일 코스</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown"><a href="#" class="dropbtn">커뮤니티</a>
+                        <ul class="dropdown_content">
+                            <li><a href="#">컬럼</a></li>
+                            <li><a href="#">소식</a></li>
+                            <li><a href="#">후기</a></li>
+                        </ul>    
+                    </li>
+                    <li class="dropdown"><a href="servicecenter.html" class="dropbtn">고객센터</a>
+                        <ul class="dropdown_content">
+                            <li><a href="servicecenter.html">FAQ</a></li>
+                            <li><a href="servicecenterquestion.html">QNA</a></li>
+                        </ul>    
+                    </li>
+                    <li class="dropdown"><a href="#" class="dropbtn">오시는 길</a>    
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <!--헤더 영역 종료-->
+        
+        <!--첫번째 메인 콘텐츠 영역 시작-->
+        <div id="firstContentsArea">
+            <div id="imgLogo"><!--로고 콘텐츠 시작-->
+                <section>
+                    <img src="images/imglogo.png" alt="YourPersonalColor">
+                </section>
+            </div>
+            <div id="mainSeasonArea"><!--메인 4계절 퍼스널 컬러 팔레트 슬라이더-->
+                <section class="mainSeasonArea_panel"><!--이미지 패널: 움직이는 이미지가 전환되는 효과-->
+                    <img class="seasonColor" src="images/spring.png" alt="springColor">
+                    <img class="seasonColor" src="images/summer.png" alt="summerColor">
+                    <img class="seasonColor" src="images/autumn.png" alt="autumnColor">
+                    <img class="seasonColor" src="images/winter.png" alt="winterColor">
+                </section>
+            </div>
+            <div class="left_right_control_panel"><!--좌우컨트롤 버튼 패널-->
+                <img class="left_control" src="images/arrow_pre.png" alt="">
+                <img class="right_control" src="images/arrow_next.png" alt="">
+            </div>    
+            <div id="subSeasonArea"><!--서브 4계절 퍼스널 컬러 팔레트 콘텐츠-->
+                <section class="subSeasonArea_panel">
+                    <img class="subseasonColor" src="images/summer.png" alt="summerColor">
+                    <img class="subseasonColor" src="images/autumn.png" alt="autumnColor">
+                    <img class="subseasonColor" src="images/winter.png" alt="winterColor">
+                </section>
+            </div>
+        </div>
+        <!--첫번째 메인 콘텐츠 영역 종료-->
+
+        <!--두번째 메인 콘텐츠 영역 시작-->
+        <div id="secondContentsArea">
+            <ul class="checkList">
+                <li><!--신체색 요소-->
+                    <img src="images/body.png" alt="body">
+                    <div class="caption">
+                        <p><span>&check;</span> 피부색</p>
+                        <p><span>&check;</span> 머리색</p>
+                        <p><span>&check;</span> 눈동자색</p>
+                    </div>
+                </li>
+                <li><!--피부질감 요소-->
+                    <img src="images/skin.png" alt="skin">
+                    <div class="caption">
+                        <p><span>&check;</span> 매트한 피부</p>
+                        <p><span>&check;</span> 매끈한 피부</p>
+                        <p><span>&check;</span> 윤기있는 피부</p>
+                    </div>
+                </li>
+                <li><!--신체특징-->
+                    <img src="images/physical.png" alt="physical">
+                    <div class="caption">
+                        <p><span>&check;</span> 무늬</p>
+                        <p><span>&check;</span> 소재</p>
+                        <p><span>&check;</span> 아이템</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+       
+        <!--두번째 메인 콘텐츠 영역 종료-->
+
+        <!--세번째 메인 콘텐츠 영역 시작-->
+        <!--슬라이더 영역-->
+        <div class="animation_canvas">
+            <!--이미지 패널: 움직이는 이미지가 전환되는 효과-->
+            <div class="slider_panel">
+                <img class="slider_image" src="images/recommend1.png" alt="">
+                <img class="slider_image" src="images/recommend2.png" alt="">
+                <img class="slider_image" src="images/recommend3.png" alt="">
+            </div>
+            <!--컨트롤 버튼 패널-->
+            <div class="control_panel">
+                <div class="control_button"></div>
+                <div class="control_button"></div>
+                <div class="control_button"></div>
+            </div>
+        </div>
+        <!--세번째 메인 콘텐츠 영역 종료-->
+
+        <!--네번째 메인 콘텐츠 영역 시작-->
+        <div id="fourthContentsArea">
+            <img src="images/move.png" alt="script">
+        </div>
+        <div id="youtube">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/1bR0Ot40kdc" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><!--frameborder="0" 없애기-->
+        </div>
+        <div id="review">
+            <p>REAL 후기</p>
+            <div class="realReview"></div>
+        </div>
+        <!--네번째 메인 콘텐츠 영역 종료-->
+
+        <!--다섯번째 메인 콘텐츠 영역 시작-->
+        <div class="schedule"><!--예약일정 확인: 달력-->
+            <h2>예약일정</h2>
+            <img src="images/schedule.png" alt="script">
+        </div>
+        <div class="confirm"><!--예약방법-->
+            <h2>예약방법</h2>
+            <div id="tel">
+                <img src="images/contactinfo.png" alt="(tele)phone number">
+            </div>
+            <div class="sns">
+                <div class="snsKakao">
+                    <a href="https://www.kakaocorp.com/page/service/service/KakaoTalk"><img src="images/kakao.png" alt="kakao" class="kakao"></a>
+                </div>
+                <div class="snsNaver">
+                    <a href="https://nid.naver.com/nidlogin.login?svctype=64&url=https%3A%2F%2Ftalk.naver.com%2F"><img src="images/naver.png" alt="naver" class="naver"></a>
+                </div>
+                <div class="snsInsta">
+                    <a href="https://www.instagram.com/"><img src="images/insta.png" alt="insta" class="insta"></a>
+                </div>
+            </div>
+        </div>
+        <!--다섯번째 메인 콘텐츠 영역 종료-->
+
+        <!--푸터 영역 시작-->
+        <footer id="footer">
+            <div id="footerInner">
+                <address>
+                    <span>서울시 행복구 색깔동 123-45 퍼스널빌딩 5층</span>
+                    <span> | 전화: 02-345-6789</span>
+                    <span> | E-MAIL: <a href="">your@personal.color</a></span>
+                </address>
+                    <p class="copyright">Copyright since &copy; 2022 by Web YourPersonalColor CORPORATION ALL RIGHTS RESERVED.</p>
+                <div class="footerSns">
+                    <ul class="addressinfo">
+                        <li class="no1"><a href="https://www.youtube.com/"><img src="images/youtube.png" alt="youtube" class="youtube"></a></li>
+                        <li class="no2"><a href="https://www.instagram.com/"><img src="images/instagram.png" alt="instagram" class="instagram"></a></li>
+                        <li class="no3"><a href="https://www.facebook.com/"><img src="images/facebook.png" alt="facebook" class="facebook"></a></li>
+                        <li class="no2"><a href="https://twitter.com/?lang=ko"><img src="images/twitter.png" alt="twitter" class="twitter"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <!--푸터 영역 종료-->
+    </div>
+    <!--#wrapper 종료-->
+    <!--주석 달기 필수, 전체 영역 마크업-->
+</body>
+</html>
+<!--메인페이지. 메인페이지 html이름은 무조건 index.html로 하기
+    div로 나누는 것보다 시멘틱테그 이용해서 사용하는게 좋음
+    한번만 정의되는 커다란 영역 및 세부 레이아웃 :id(id 남발 금지)
+    나머진 중복가능한 class로 공통 영역 나누기-->
+<!--헤더, 메인 비쥬얼, 컨텐츠(3부분으로 나눔), 슬로건, 푸터
+    폰트 사용, 필요 이미지&공통이미지 나눠짐-->
+<!--뭔가 적용이 안될 땐 f12 눌러서 핸드폰 보는거 옆 마우스 모양 클릭해서 홈페이지 눌러보기, styles에 안뜨면 뭔가 오류난거, 체크부분 눌러서 확인해볼 수 있음. 체크부분은 원본에 지장 없음-->
